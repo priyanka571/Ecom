@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-commerce Platform</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('get_products') }}">Products</a></li>
+            <li><a href="{{ url_for('get_cart') }}">Cart</a></li>
+            <li><a href="{{ url_for('get_orders') }}">Orders</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>We offer a wide range of products across various categories. Sign up or sign in to browse and purchase products.</p>
+        </section>
+
+        <section>
+            <h2>Featured Products</h2>
+            <p>Explore our featured products by clicking on the "Products" link above.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 E-commerce Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

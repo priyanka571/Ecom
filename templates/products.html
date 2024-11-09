@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <ul id="productList"></ul>
+    <script>
+        async function fetchProducts() {
+            const response = await fetch('/products');
+            const products = await response.json();
+            const productList = document.getElementById('productList');
+            products.forEach(product => {
+                const item = document.createElement('li');
+                item.textContent = product.name;
+                productList.appendChild(item);
+            });
+        }
+        fetchProducts();
+    </script>
+</body>
+</html>
